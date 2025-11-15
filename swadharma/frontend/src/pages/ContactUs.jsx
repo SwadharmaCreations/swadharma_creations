@@ -171,7 +171,7 @@ export default function ContactUs() {
       <section className="contact-section" id="contact">
         <div className="contact-container">
           <div className="contact-form-container">
-            <h2 className="form-title">Send Us a Message</h2>
+            <h2 className="form-title">Send Us a Message!</h2>
             <p className="form-subtitle">Have a project in mind? Fill out the form and we'll get back to you within 24 hours.</p>
 
             {/* 2. FORM IS UPDATED */}
