@@ -66,15 +66,22 @@ export default function WorkPage() {
 
   // Hero text transition effect
   useEffect(() => {
-    const heroTitleSpan = document.querySelector('.hero-title span')
-    const start = setTimeout(() => {
-      if (heroTitleSpan) {
-        heroTitleSpan.style.transform = 'translateY(0)'
-        heroTitleSpan.style.opacity = '1'
-      }
-    }, 500) // Initial delay
-    return () => clearTimeout(start)
-  }, [])
+      const heroTitleSpan = document.querySelector('.hero-title span')
+      const heroSubtitle = document.querySelector('.hero-subtitle')
+      const start = setTimeout(() => {
+        if (heroTitleSpan) {
+          heroTitleSpan.style.transform = 'translateY(0)'
+          heroTitleSpan.style.opacity = '1'
+        }
+        setTimeout(() => {
+          if (heroSubtitle) {
+            heroSubtitle.style.transform = 'translateY(0)'
+            heroSubtitle.style.opacity = '1'
+          }
+        }, 300)
+      }, 500)
+      return () => clearTimeout(start)
+    }, [])
 
   return (
     <main>
@@ -116,6 +123,8 @@ export default function WorkPage() {
           opacity: 0;
           transition: transform .6s ease, opacity .6s ease;
         }
+        .hero-subtitle{font-weight:300;font-style:italic;font-size:clamp(1.1rem,3vw,1.5rem);margin-top:1.5rem;max-width:700px;margin-left:auto;margin-right:auto;color:#555}
+        .hero-highlight{background-color:var(--yellow);padding:0 .5rem}
         /* --- END HERO --- */
 
         .grid{padding:4rem 5%;display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
@@ -148,6 +157,7 @@ export default function WorkPage() {
           <h1 className="hero-title">
             <span>Our Work</span>
           </h1>
+          <p className="hero-subtitle">Some of our <span className="hero-highlight">fine grained</span> work</p>
         </div>
       </section>
 

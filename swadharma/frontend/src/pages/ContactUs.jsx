@@ -161,7 +161,7 @@ export default function ContactUs() {
         </div>
         <div className="hero-content">
           <h1 className="hero-title">
-            <span>Let's <span className="hero-highlight">Connect</span></span>
+            <span>Let's Connect </span>
           </h1>
           <p className="hero-subtitle">We'd love to hear about your project and explore how we can bring your vision to life</p>
         </div>
@@ -239,7 +239,7 @@ export default function ContactUs() {
               <p className="contact-info-content">Prefer to reach out directly? Here's how you can contact our team.</p>
               <div className="contact-info-details">
                 <div className="contact-info-item"><i className="fas fa-envelope"></i><span><a href="mailto:hello@swadharmacreations.com">hello@swadharmacreations.com</a></span></div>
-                <div className="contact-info-item"><i className="fas fa-phone-alt"></i><span><a href="tel:+11234567890">+1 (123) 456-7890</a></span></div>
+                <div className="contact-info-item"><i className="fas fa-phone-alt"></i><span><a href="tel:+91 9346606019">+91 9346606019</a></span></div>
                 <div className="contact-info-item"><i className="fas fa-clock"></i><span>Mon-Fri: 9am - 6pm</span></div>
               </div>
               <div className="social-links" style={{display:'flex',gap:'1.2rem',marginTop:'1.8rem'}}>

@@ -15,26 +15,22 @@ export default function AboutUs() {
 
   // Hero text transition effect
   useEffect(() => {
-    const heroTitleSpans = document.querySelectorAll('.hero-title span')
-    const heroSubtitle = document.querySelector('.hero-subtitle')
-    const start = setTimeout(() => {
-      // Animate title
-      heroTitleSpans.forEach((span, index) => {
-        setTimeout(() => {
-          span.style.transform = 'translateY(0)'
-          span.style.opacity = '1'
-        }, 300 * index) // Stagger if multiple spans
-      })
-      // Animate subtitle
-      setTimeout(() => {
-        if (heroSubtitle) {
-          heroSubtitle.style.transform = 'translateY(0)'
-          heroSubtitle.style.opacity = '1'
-        }
-      }, 600) // Starts after title animation begins
-    }, 500) // Initial delay
-    return () => clearTimeout(start)
-  }, [])
+        const heroTitleSpan = document.querySelector('.hero-title span')
+        const heroSubtitle = document.querySelector('.hero-subtitle')
+        const start = setTimeout(() => {
+          if (heroTitleSpan) {
+            heroTitleSpan.style.transform = 'translateY(0)'
+            heroTitleSpan.style.opacity = '1'
+          }
+          setTimeout(() => {
+            if (heroSubtitle) {
+              heroSubtitle.style.transform = 'translateY(0)'
+              heroSubtitle.style.opacity = '1'
+            }
+          }, 600)
+        }, 500)
+        return () => clearTimeout(start)
+      }, [])
 
   return (
     <main>
@@ -64,6 +60,7 @@ export default function AboutUs() {
         .hero-title{font-family:'Commissioner',sans-serif;font-weight:700;font-size:4rem;line-height:1.1;margin:0;color:var(--blue); overflow: hidden;}
         .hero-title span {display:inline-block;transform:translateY(100%);opacity:0;transition:transform .6s ease, opacity .6s ease}
         .hero-subtitle{font-weight:300;font-style:italic;font-size:1.5rem;margin-top:1.5rem;max-width:600px;margin-inline:auto;color:#333; transform:translateY(10px);opacity:0;transition:transform .6s ease, opacity .6s ease}
+        .hero-highlight{background-color:var(--yellow);padding:0 .5rem;display:inline-block}
         /* --- END HERO --- */
 
         section{padding:100px 0}
@@ -127,7 +124,7 @@ export default function AboutUs() {
         </div>
         <div className="hero-content">
           <h1 className="hero-title"><span>About Us</span></h1>
-          <p className="hero-subtitle">Discover the story behind Swadharma Creations</p>
+          <p className="hero-subtitle">Discover the story behind <span className="hero-highlight">Swadharma Creations</span></p>
         </div>
       </section>
 
