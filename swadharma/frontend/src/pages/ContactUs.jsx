@@ -82,16 +82,7 @@ export default function ContactUs() {
           transition: transform .6s ease, opacity .6s ease;
         }
         .hero-highlight{background-color:var(--yellow);padding:0 .5rem;display:inline-block}
-        .hero-subtitle {
-          font-weight: 400;
-          font-size: 1.4rem;
-          color: #444;
-          margin: 0 auto;
-          max-width: 600px;
-          transform: translateY(10px);
-          opacity: 0;
-          transition: transform .6s ease, opacity .6s ease;
-        }
+        .hero-subtitle{font-weight:300;font-style:italic;font-size:clamp(1.1rem,3vw,1.5rem);margin-top:1.5rem;max-width:700px;margin-left:auto;margin-right:auto;color:#555}
         /* --- END HERO --- */
 
         /* --- FLOATING ELEMENTS --- */
@@ -163,7 +154,7 @@ export default function ContactUs() {
           <h1 className="hero-title">
             <span>Let's Connect </span>
           </h1>
-          <p className="hero-subtitle">We'd love to hear about your project and explore how we can bring your vision to life</p>
+          <p className="hero-subtitle">We'd love to hear about your project and explore how we can <span className="hero-highlight">bring your vision</span> to life</p>
         </div>
       </section>
 
